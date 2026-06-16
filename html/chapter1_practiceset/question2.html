@@ -1,0 +1,90 @@
+<!token html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Nepal - Watch TV Shows Online</title>
+    <style>
+        /* Base Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Netflix Background Gradient Effect */
+        .hero-container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,1) 100%),
+                        url('https://assets.nflxext.com/ffe/siteui/vlv3/74d373a6-ae77-4d22-ad9f-46596164ac20/web/NP-en-20221031-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            color: #e50914;
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .signin-btn {
+            background-color: #e50914;
+            color: white;
+            padding: 7px 17px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Text Area */
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Netflix</div>
+        <a href="#" class="signin-btn">Sign In</a>
+    </nav>
+
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Unlimited movies, TV shows, and more.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+        </div>
+    </div>
+
+</body>
+</html>
