@@ -1,0 +1,81 @@
+<!-- Create a website which has your 5 top used websites bookmarked. The links
+should open in a new tab. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 3</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body */
+        body {
+            background: #0f0f0f;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main heading */
+        h1 {
+            margin-bottom: 40px;
+            font-size: 40px;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            color: #ff3b3b;
+            text-shadow: 0 0 10px rgba(255, 59, 59, 0.4);
+        }
+
+        /* Website cards */
+        h2 {
+            width: 300px;
+            margin: 12px 0;
+        }
+
+        /* Links */
+        h2 a {
+            display: block;
+            text-decoration: none;
+            background: #1a0f0f;
+            color: #ffcccc;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s ease;
+            border: 1px solid #ff3b3b;
+            box-shadow: 0 4px 12px rgba(255, 59, 59, 0.15);
+        }
+
+        /* Hover effect */
+        h2 a:hover {
+            background: #ff3b3b;
+            color: #000000;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(255, 59, 59, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>my top most used websites:</h1>
+    <h2> <a href="https://google.com" target="_blank">google</a></h2>
+    <h2> <a href="https://facebook.com" target="_blank">facebook</a></h2>
+    <h2> <a href="https://youtube.com" target="_blank">youtube</a></h2>
+    <h2> <a href="https://github.com" target="_blank">github</a></h2>
+    <h2> <a href="https://indiasgotlatent.watchtvs.live/" target="_blank">India's got latent</a></h2>
+
+</body>
+
+</html>

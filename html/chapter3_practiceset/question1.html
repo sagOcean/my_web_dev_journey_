@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO implementation</title>
+    <style>
+        /* Global reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body */
+        body {
+            background-color: #281bb2;
+            color: #e6e6e6;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #111;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header img {
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        /* Navigation */
+        header div a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        header div a:hover {
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        /* Main content */
+        main {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #161616;
+            border-radius: 10px;
+            border: 1px solid #2a2a2a;
+        }
+
+        section h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            color: #bdbdbd;
+        }
+
+        /* Articles */
+        article {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            border-left: 3px solid #444;
+        }
+
+        article h3 {
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        article p {
+            color: #cfcfcf;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            border-top: 1px solid #2a2a2a;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h1>the company</h1>
+        <img src="data:image/png;base64,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"
+            alt="logo" height="50" width="50">
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/about">About us</a>
+            <a href="/contact">contact</a>
+        </nav>
+
+    </header>
+    <main>
+        <section>
+            <h2>Create,Update,Delete</h2>
+            <p>we provide the best edits to your work which you can change anytime,anywhere.</p>
+        </section>
+        <section>
+            <h2>About us</h2>
+            <p>we are a service company based on florida. "the company" was created on december,2005 and is on internet
+                ever since.</p>
+        </section>
+        <section>
+            <h2>Our services:</h2>
+            <article>
+                <h3>Database Management</h3>
+                <p>we provide powerful servers that can hold a large amount of data at affordable costs.</p>
+                <h3>IDS</h3>
+                <p>Security is our main motto. We dont compromize over security so we have our custom built IDS that
+                    monitors real-time network traffic and detects unauthorized access.</p>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        @copyright 2026,LLC
+    </footer>
+</body>
+
+</html>
