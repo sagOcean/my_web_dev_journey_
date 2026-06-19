@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(33, 12, 12, 0.1);
+    }
+
+    fieldset {
+      border: 1px solid #42d981;
+      border-radius: 40px;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+
+    legend {
+      font-weight: bolder;
+      padding: 0 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border: 1px solid #d51212;
+      border-radius: 6px;
+    }
+
+    .row {
+      display:flex;
+      gap: 15px;
+    }
+
+    .row > div {
+      flex: 1;
+    }
+
+    .inline {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap-reverse;
+      margin-top: 5px;
+      
+    }
+
+    .inline label {
+      display: inline;
+      margin: 0;
+    }
+
+    .checkbox-inline, .radio-inline {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Travel Booking Form</h1>
+
+<form>
+
+  <!-- 1. Personal Information -->
+  <fieldset>
+    <legend>Personal Information</legend>
+
+    <div class="row">
+      <div>
+        <label>Full Name</label>
+        <input type="text" required>
+      </div>
+      <div>
+        <label>Email Address</label>
+        <input type="email" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label>Phone Number</label>
+        <input type="tel">
+      </div>
+      <div>
+        <label>Date of Birth</label>
+        <input type="date">
+      </div>
+    </div>
+
+    <label>Nationality</label>
+    <input type="text">
+  </fieldset>
+
+  <!-- 2. Travel Details -->
+  <fieldset>
+    <legend>Travel Details</legend>
+
+    <label>Destination</label>
+    <input type="text">
+
+    <label>Departure Location</label>
+    <input type="text">
+
+    <div class="row">
+      <div>
+        <label>Start Date</label>
+        <input type="date">
+      </div>
+      <div>
+        <label>Return Date</label>
+        <input type="date">
+      </div>
+    </div>
+
+    <label>Number of Travelers</label>
+    <input type="number" min="1">
+
+    <label>Type of Trip</label>
+    <div class="inline">
+      <label class="radio-inline"><input type="radio" name="trip"> Solo</label>
+      <label class="radio-inline"><input type="radio" name="trip"> Couple</label>
+      <label class="radio-inline"><input type="radio" name="trip"> Family</label>
+      <label class="radio-inline"><input type="radio" name="trip"> Group</label>
+    </div>
+  </fieldset>
+
+  <!-- 3. Accommodation -->
+  <fieldset>
+    <legend>Accommodation Preferences</legend>
+
+    <label>Hotel Type</label>
+    <select>
+      <option>Budget</option>
+      <option>Standard</option>
+      <option>Luxury</option>
+    </select>
+
+    <label>Room Type</label>
+    <select>
+      <option>Single</option>
+      <option>Double</option>
+      <option>Suite</option>
+    </select>
+
+    <label>Number of Rooms</label>
+    <input type="number" min="1">
+
+    <label>Meal Plan</label>
+    <select>
+      <option>Breakfast only</option>
+      <option>Half board</option>
+      <option>Full board</option>
+      <option>All inclusive</option>
+    </select>
+  </fieldset>
+
+  <!-- 4. Transport -->
+  <fieldset>
+    <legend>Transport Preferences</legend>
+
+    <label>Flight Class</label>
+    <select>
+      <option>Economy</option>
+      <option>Business</option>
+      <option>First Class</option>
+    </select>
+
+    <label>Airport Transfer Required?</label>
+    <select>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+
+    <label>Preferred Airline (optional)</label>
+    <input type="text">
+  </fieldset>
+
+  <!-- 5. Budget -->
+  <fieldset>
+    <legend>Budget & Offers</legend>
+
+    <label>Budget Range</label>
+    <input type="text">
+
+    <label>Promo / Discount Code</label>
+    <input type="text">
+  </fieldset>
+
+  <!-- 6. Special Requests -->
+  <fieldset>
+    <legend>Special Requests</legend>
+
+    <label>Dietary Requirements</label>
+    <input type="text">
+
+    <label>Medical Conditions</label>
+    <input type="text">
+
+    <label>Accessibility Needs</label>
+    <input type="text">
+
+    <label>Special Occasion</label>
+    <input type="text">
+
+    <label>Additional Notes</label>
+    <textarea rows="4"></textarea>
+  </fieldset>
+
+  <!-- 7. Payment -->
+  <fieldset>
+    <legend>Payment Information</legend>
+
+    <label>Payment Method</label>
+    <select>
+      <option>Card</option>
+      <option>UPI</option>
+      <option>Bank Transfer</option>
+      <option>Wallet</option>
+    </select>
+
+    <label>Billing Address</label>
+    <textarea rows="3"></textarea>
+  </fieldset>
+
+  <!-- 8. Confirmation -->
+  <fieldset>
+    <legend>Confirmation</legend>
+
+    <label class="checkbox-inline">
+      <input type="checkbox"> I accept terms & conditions
+    </label>
+
+    <label class="checkbox-inline">
+      <input type="checkbox"> Subscribe to newsletter
+    </label>
+  </fieldset>
+
+  <button type="submit">Submit Booking</button>
+
+</form>
+
+</body>
+</html>
