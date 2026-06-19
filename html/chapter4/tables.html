@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        caption {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px;
+            color: #333;
+        }
+
+        th {
+            background-color: #e63946;
+            color: rgb(105, 11, 11);
+            padding: 12px;
+            border: 1px solid #ccc;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #320808;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        tbody tr:hover {
+            background-color: #ffe5e5;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2px">
+        <caption>student details:</caption>
+        <thead>
+            <tr>
+                <th>A</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>Z</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">B</td>
+                <td>1</td>
+                <td rowspan="3">2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td colspan="2">D</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
