@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food Online | Swiggy Clone</title>
+    
+    <!-- Google Fonts: Inter for a clean, modern look similar to Proxima Nova -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Global Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Left Side: Logo & Location -->
+            <div class="nav-left">
+                <a href="#" class="logo-link">
+                    <!-- SVG Logo Placeholder -->
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <span class="logo-text">Swiggy</span>
+                </a>
+                <div class="location-selector">
+                    <span class="location-text">Home</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+
+            <!-- Right Side: Links -->
+            <nav class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i> <span>Search</span></a></li>
+                    <li><a href="#" class="nav-item"><i class="fa-solid fa-percent"></i> <span>Offers</span><sup class="super">NEW</sup></a></li>
+                    <li><a href="#" class="nav-item"><i class="fa-regular fa-life-ring"></i> <span>Help</span></a></li>
+                    <li><a href="#" class="nav-item"><i class="fa-regular fa-user"></i> <span>Sign In</span></a></li>
+                    <li><a href="#" class="nav-item cart-btn">
+                        <i class="fa-solid fa-shopping-cart"></i> <span>Cart</span>
+                        <span class="cart-badge">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Hero Promotion Section -->
+        <!-- Using semantic <section> and <article> for cards -->
+        <section class="hero-section">
+            <div class="container">
+                <h2 class="section-title">Best offers for you</h2>
+                <div class="offers-grid">
+                    <article class="promo-card">
+                        <div class="promo-content">
+                            <h3>50% OFF</h3>
+                            <p>First order only</p>
+                            <button class="btn-primary">Claim Now</button>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pizza Promo">
+                    </article>
+                    <article class="promo-card">
+                        <div class="promo-content">
+                            <h3>Free Delivery</h3>
+                            <p>On orders above ₹199</p>
+                            <button class="btn-primary">Order Now</button>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1555126634-7233227dd558?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Burger Promo">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. "What's on your mind?" Category Grid -->
+        <section class="category-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What's on your mind?</h2>
+                    <div class="scroll-controls">
+                        <button class="scroll-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="scroll-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="category-grid">
+                    <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1564834724105-918939bba5de?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Biryani">
+                        <span>Biryani</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Pizza">
+                        <span>Pizza</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Burger">
+                        <span>Burger</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Rolls">
+                        <span>Rolls</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Chinese">
+                        <span>Chinese</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Mutton">
+                        <span>Non-Veg</span>
+                    </a>
+                    <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cakes">
+                        <span>Cakes</span>
+                    </a>
+                     <a href="#" class="category-item">
+                        <img src="https://images.unsplash.com/photo-1619250903480-3b216b3a6a09?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ice Cream">
+                        <span>Ice Cream</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. "Top restaurant chains" Section -->
+        <section class="restaurant-section">
+            <div class="container">
+                <h2 class="section-title">Top restaurant chains in Mumbai</h2>
+                <div class="restaurant-grid">
+                    <!-- Card 1 -->
+                    <article class="restaurant-card">
+                        <div class="card-image">
+                            <span class="promo-tag">50% OFF</span>
+                            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Pizza Place">
+                        </div>
+                        <div class="card-details">
+                            <h3>Domino's Pizza</h3>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.2 &bull; 25-30 mins</div>
+                            <p class="cuisine">Pizza, Italian, Pasta</p>
+                            <p class="location-info">Link Road, Andheri West</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="restaurant-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Burger King">
+                        </div>
+                        <div class="card-details">
+                            <h3>Burger King</h3>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.1 &bull; 35-40 mins</div>
+                            <p class="cuisine">Burgers, American</p>
+                            <p class="location-info">Infiniti Mall, Malad</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="restaurant-card">
+                        <div class="card-image">
+                            <span class="promo-tag">Free Delivery</span>
+                            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Biryani">
+                        </div>
+                        <div class="card-details">
+                            <h3>Paradise Biryani</h3>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.3 &bull; 45-50 mins</div>
+                            <p class="cuisine">Biryani, Hyderabadi</p>
+                            <p class="location-info">Metro Junction, Kurla</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="restaurant-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0e82?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="KFC">
+                        </div>
+                        <div class="card-details">
+                            <h3>KFC</h3>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.0 &bull; 20-25 mins</div>
+                            <p class="cuisine">Fast Food, Chicken</p>
+                            <p class="location-info">Phoenix Marketcity</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Card 5 -->
+                    <article class="restaurant-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo

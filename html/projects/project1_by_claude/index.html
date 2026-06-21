@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy — Order Food Online</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- ============================================================
+       NAVIGATION BAR
+  ============================================================ -->
+    <header class="navbar" role="banner">
+        <div class="navbar__inner container">
+
+            <!-- Logo -->
+            <a href="#" class="navbar__logo" aria-label="Swiggy Home">
+                <svg class="logo-svg" viewBox="0 0 120 38" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path
+                        d="M12 4C7.58 4 4 7.58 4 12s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 13.5A5.5 5.5 0 1 1 12 7a5.5 5.5 0 0 1 0 11z"
+                        fill="#FC8019" />
+                    <circle cx="12" cy="12" r="3" fill="#FC8019" />
+                    <path d="M12 20c-4.42 0-8 3.58-8 8h16c0-4.42-3.58-8-8-8z" fill="#FC8019" />
+                    <text x="30" y="26" font-family="Nunito, sans-serif" font-weight="800" font-size="22"
+                        fill="#282C3F">swiggy</text>
+                </svg>
+            </a>
+
+            <!-- Location Selector -->
+            <button class="navbar__location" aria-label="Change location" aria-expanded="false">
+                <span class="location__label">Home</span>
+                <span class="location__separator">—</span>
+                <span class="location__city">Mumbai, Maharashtra</span>
+                <i class="fa-solid fa-chevron-down location__arrow" aria-hidden="true"></i>
+            </button>
+
+            <!-- Nav Links -->
+            <nav class="navbar__links" aria-label="Main navigation">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass nav-link__icon" aria-hidden="true"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="nav-link nav-link--offers">
+                    <i class="fa-solid fa-percent nav-link__icon" aria-hidden="true"></i>
+                    <span>Offers</span>
+                    <span class="badge badge--new">NEW</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-circle-question nav-link__icon" aria-hidden="true"></i>
+                    <span>Help</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-regular fa-user nav-link__icon" aria-hidden="true"></i>
+                    <span>Sign In</span>
+                </a>
+                <a href="#" class="nav-link nav-link--cart" aria-label="Cart, 2 items">
+                    <span class="cart-wrapper">
+                        <i class="fa-solid fa-bag-shopping nav-link__icon" aria-hidden="true"></i>
+                        <span class="cart-count" aria-hidden="true">2</span>
+                    </span>
+                    <span>Cart</span>
+                </a>
+            </nav>
+
+            <!-- Hamburger (mobile) -->
+            <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ============================================================
+         HERO SEARCH SECTION
+    ============================================================ -->
+        <section class="hero" aria-label="Search and hero">
+            <div class="hero__bg" aria-hidden="true">
+                <div class="hero__blob hero__blob--1"></div>
+                <div class="hero__blob hero__blob--2"></div>
+            </div>
+            <div class="container hero__inner">
+                <div class="hero__text">
+                    <h1 class="hero__headline">
+                        Order food &amp; groceries.<br />
+                        <span class="hero__headline--accent">Delivered faster</span> 🚀
+                    </h1>
+                    <p class="hero__sub">From your favourite restaurants to your doorstep</p>
+                    <div class="hero__search" role="search">
+                        <i class="fa-solid fa-location-dot search__pin" aria-hidden="true"></i>
+                        <input type="text" class="hero__search-input" placeholder="Enter your delivery location"
+                            aria-label="Delivery location" />
+                        <button class="hero__search-btn" type="button">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__illustration" aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format&fit=crop&q=80"
+                        alt="" class="hero__img" loading="eager" />
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+         PROMO BANNERS CAROUSEL
+    ============================================================ -->
+        <section class="promos section" aria-labelledby="promos-heading">
+            <div class="container">
+                <h2 class="section__title" id="promos-heading">Offers just for you</h2>
+                <div class="promos__track" role="list">
+
+                    <article class="promo-card promo-card--orange" role="listitem">
+                        <div class="promo-card__badge">LIMITED TIME</div>
+                        <div class="promo-card__content">
+                            <p class="promo-card__offer">50% OFF</p>
+                            <h3 class="promo-card__title">On your first order</h3>
+                            <p class="promo-card__sub">Use code: SWIGGY50</p>
+                            <a href="#" class="promo-card__cta">Order Now</a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&auto=format&fit=crop&q=80"
+                            alt="Burger deal" class="promo-card__img" loading="lazy" />
+                    </article>
+
+                    <article class="promo-card promo-card--teal" role="listitem">
+                        <div class="promo-card__badge">NEW</div>
+                        <div class="promo-card__content">
+                            <p class="promo-card__offer">FREE Delivery</p>
+                            <h3 class="promo-card__title">On all orders above ₹199</h3>
+                            <p class="promo-card__sub">No code needed</p>
+                            <a href="#" class="promo-card__cta">Explore</a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300&auto=format&fit=crop&q=80"
+                            alt="Pizza deal" class="promo-card__img" loading="lazy" />
+                    </article>
+
+                    <article class="promo-card promo-card--purple" role="listitem">
+                        <div class="promo-card__badge">TRENDING</div>
+                        <div class="promo-card__content">
+                            <p class="promo-card__offer">₹100 OFF</p>
+                            <h3 class="promo-card__title">On biryani orders</h3>
+                            <p class="promo-card__sub">Use code: BIRYANILOVE</p>
+                            <a href="#" class="promo-card__cta">Order Biryani</a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?w=300&auto=format&fit=crop&q=80"
+                            alt="Biryani deal" class="promo-card__img" loading="lazy" />
+                    </article>
+
+                    <article class="promo-card promo-card--crimson" role="listitem">
+                        <div class="promo-card__badge">WEEKEND</div>
+                        <div class="promo-card__content">
+                            <p class="promo-card__offer">30% OFF</p>
+                            <h3 class="promo-card__title">Weekend treat deals</h3>
+                            <p class="promo-card__sub">Use code: WEEKEND30</p>
+                            <a href="#" class="promo-card__cta">Get Deals</a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1484723091739-30990058462c?w=300&auto=format&fit=crop&q=80"
+                            alt="Pancake deal" class="promo-card__img" loading="lazy" />
+                    </article>
+
+                </div>
+                <!-- Scroll indicators -->
+                <div class="promos__dots" role="tablist" aria-label="Promotion slides">
+                    <button class="dot dot--active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+                    <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+                    <button class="dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+                    <button class="dot" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+         WHAT'S ON YOUR MIND (CATEGORIES)
+    ============================================================ -->
+        <section class="categories section" aria-labelledby="categories-heading">
+            <div class="container">
+                <h2 class="section__title" id="categories-heading">What's on your mind?</h2>
+                <div class="categories__scroll-wrapper">
+                    <ul class="categories__list" role="list">
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Biryani">
+                                <div class="category-item__circle" style="--cat-bg: #FFF3E0;">
+                                    <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Biryani" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Biryani</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Pizza">
+                                <div class="category-item__circle" style="--cat-bg: #FCE4EC;">
+                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Pizza" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Pizza</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Burgers">
+                                <div class="category-item__circle" style="--cat-bg: #E8F5E9;">
+                                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Burgers" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Burgers</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order North Indian">
+                                <div class="category-item__circle" style="--cat-bg: #F3E5F5;">
+                                    <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="North Indian" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">North Indian</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Chinese">
+                                <div class="category-item__circle" style="--cat-bg: #E3F2FD;">
+                                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Chinese" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Chinese</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Cakes">
+                                <div class="category-item__circle" style="--cat-bg: #FFF8E1;">
+                                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Cakes" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Cakes</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Rolls">
+                                <div class="category-item__circle" style="--cat-bg: #E0F7FA;">
+                                    <img src="https://images.unsplash.com/photo-1484723091739-30990058462c?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Rolls" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Rolls</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Sushi">
+                                <div class="category-item__circle" style="--cat-bg: #F1F8E9;">
+                                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Sushi" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Sushi</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Desserts">
+                                <div class="category-item__circle" style="--cat-bg: #FCE4EC;">
+                                    <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Desserts" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Desserts</span>
+                            </a>
+                        </li>
+
+                        <li class="category-item" role="listitem">
+                            <a href="#" class="category-item__link" aria-label="Order Pasta">
+                                <div class="category-item__circle" style="--cat-bg: #FFF3E0;">
+                                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=120&h=120&auto=format&fit=crop&q=80"
+                                        alt="Pasta" loading="lazy" />
+                                </div>
+                                <span class="category-item__label">Pasta</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+         TOP RESTAURANT CHAINS
+    ============================================================ -->
+        <section class="restaurants section" aria-labelledby="restaurants-heading">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title" id="restaurants-heading">Top restaurant chains in Mumbai</h2>
+                    <a href="#" class="section__see-all">See all <i class="fa-solid fa-arrow-right"
+                            aria-hidden="true"></i></a>
+                </div>
+                <div class="restaurants__grid" role="list">
+
+                    <!-- Card 1 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="McDonald's — 4.4 stars, 20-25 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="McDonald's" class="restaurant-card__img" loading="lazy" />
+                                <span class="restaurant-card__discount">40% OFF up to ₹80</span>
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">McDonald's</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.4
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        20–25 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">Burgers, Wraps, American</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Bandra West
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="Pizza Hut — 4.2 stars, 30-35 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="Pizza Hut" class="restaurant-card__img" loading="lazy" />
+                                <span class="restaurant-card__discount">50% OFF up to ₹100</span>
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">Pizza Hut</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.2
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        30–35 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">Pizza, Pasta, Italian</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Andheri East
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="Behrouz Biryani — 4.5 stars, 35-40 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="Behrouz Biryani" class="restaurant-card__img" loading="lazy" />
+                                <span class="restaurant-card__discount">₹125 OFF</span>
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">Behrouz Biryani</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating rating--high">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.5
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        35–40 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">Biryani, Kebabs, Mughlai</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Powai
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="KFC — 4.1 stars, 25-30 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="KFC" class="restaurant-card__img" loading="lazy" />
+                                <span class="restaurant-card__discount">20% OFF</span>
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">KFC</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.1
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        25–30 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">Fried Chicken, Burgers, Fast Food</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Juhu
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="Wow Momo — 4.3 stars, 20-30 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="Wow Momo" class="restaurant-card__img" loading="lazy" />
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">Wow Momo</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.3
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        20–30 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">Momos, Chinese, Tibetan</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Kurla
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="Faasos — 4.0 stars, 30-35 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1484723091739-30990058462c?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="Faasos" class="restaurant-card__img" loading="lazy" />
+                                <span class="restaurant-card__discount">30% OFF up to ₹75</span>
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">Faasos</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.0
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        30–35 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">Wraps, Rolls, Sandwiches</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Malad West
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="Box8 — 4.4 stars, 25-35 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="Box8" class="restaurant-card__img" loading="lazy" />
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">Box8</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating rating--high">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.4
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        25–35 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">North Indian, Punjabi, Thali</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Goregaon
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 8 -->
+                    <article class="restaurant-card" role="listitem" tabindex="0">
+                        <a href="#" class="restaurant-card__link" aria-label="Sweet Truth — 4.6 stars, 40-50 mins">
+                            <div class="restaurant-card__img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=220&auto=format&fit=crop&q=80"
+                                    alt="Sweet Truth" class="restaurant-card__img" loading="lazy" />
+                                <span class="restaurant-card__discount">Flat ₹150 OFF</span>
+                            </div>
+                            <div class="restaurant-card__body">
+                                <h3 class="restaurant-card__name">Sweet Truth</h3>
+                                <div class="restaurant-card__meta">
+                                    <span class="rating rating--high">
+                                        <i class="fa-solid fa-star rating__icon" aria-hidden="true"></i>
+                                        4.6
+                                    </span>
+                                    <span class="separator" aria-hidden="true">·</span>
+                                    <span class="delivery-time">
+                                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                        40–50 mins
+                                    </span>
+                                </div>
+                                <p class="restaurant-card__cuisine">Cakes, Pastries, Desserts</p>
+                                <p class="restaurant-card__location">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    Colaba
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+
+                </div><!-- /grid -->
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+         APP DOWNLOAD BANNER
+    ============================================================ -->
+        <section class="app-banner section" aria-label="Download the Swiggy app">
+            <div class="container app-banner__inner">
+                <div class="app-banner__content">
+                    <p class="app-banner__eyebrow">For better experience</p>
+                    <h2 class="app-banner__title">Download the Swiggy app</h2>
+                    <p class="app-banner__sub">We will send you a link, open it on your phone to download the app</p>
+                    <div class="app-banner__inputs">
+                        <div class="app-banner__phone-field">
+                            <span class="app-banner__dial">+91</span>
+                            <input type="tel" placeholder="Enter your mobile number"
+                                aria-label="Mobile number for app download link" />
+                        </div>
+                        <button class="btn btn--orange" type="button">Send SMS</button>
+                    </div>
+                    <div class="app-banner__stores">
+                        <p class="app-banner__stores-label">Download app from</p>
+                        <div class="app-banner__store-buttons">
+                            <a href="#" class="store-btn" aria-label="Download on Google Play">
+                                <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+                                <span>
+                                    <small>Get it on</small>
+                                    <strong>Google Play</strong>
+                                </span>
+                            </a>
+                            <a href="#" class="store-btn" aria-label="Download on App Store">
+                                <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                                <span>
+                                    <small>Available on</small>
+                                    <strong>App Store</strong>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-banner__mockup" aria-hidden="true">
+                    <div class="phone-frame">
+                        <div class="phone-frame__screen">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&auto=format&fit=crop&q=80"
+                                alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__top">
+
+                <!-- Col 1: Brand -->
+                <div class="footer__col footer__col--brand">
+                    <div class="footer__logo" aria-label="Swiggy">
+                        <svg viewBox="0 0 120 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            width="100">
+                            <path
+                                d="M12 4C7.58 4 4 7.58 4 12s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 13.5A5.5 5.5 0 1 1 12 7a5.5 5.5 0 0 1 0 11z"
+                                fill="#FC8019" />
+                            <circle cx="12" cy="12" r="3" fill="#FC8019" />
+                            <path d="M12 20c-4.42 0-8 3.58-8 8h16c0-4.42-3.58-8-8-8z" fill="#FC8019" />
+                            <text x="30" y="26" font-family="Nunito, sans-serif" font-weight="800" font-size="22"
+                                fill="white">swiggy</text>
+                        </svg>
+                    </div>
+                    <p class="footer__tagline">© 2024 Bundl Technologies Pvt. Ltd</p>
+                    <div class="footer__social" aria-label="Social media links">
+                        <a href="#" class="social-link" aria-label="Swiggy on LinkedIn"><i
+                                class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Swiggy on Instagram"><i
+                                class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Swiggy on Twitter"><i class="fa-brands fa-x-twitter"
+                                aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Swiggy on Facebook"><i
+                                class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Company -->
+                <nav class="footer__col" aria-label="Company links">
+                    <h3 class="footer__col-title">Company</h3>
+                    <ul class="footer__links" role="list">
+                        <li><a href="#" class="footer__link">About</a></li>
+                        <li><a href="#" class="footer__link">Careers</a></li>
+                        <li><a href="#" class="footer__link">Team</a></li>
+                        <li><a href="#" class="footer__link">Swiggy One</a></li>
+                        <li><a href="#" class="footer__link">Swiggy Instamart</a></li>
+                        <li><a href="#" class="footer__link">Swiggy Genie</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Col 3: Contact -->
+                <nav class="footer__col" aria-label="Contact links">
+                    <h3 class="footer__col-title">Contact us</h3>
+                    <ul class="footer__links" role="list">
+                        <li><a href="#" class="footer__link">Help &amp; Support</a></li>
+                        <li><a href="#" class="footer__link">Partner with us</a></li>
+                        <li><a href="#" class="footer__link">Ride with us</a></li>
+                    </ul>
+                    <h3 class="footer__col-title" style="margin-top: 2rem;">Legal</h3>
+                    <ul class="footer__links" role="list">
+                        <li><a href="#" class="footer__link">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="footer__link">Cookie Policy</a></li>
+                        <li><a href="#" class="footer__link">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Col 4: Cities -->
+                <nav class="footer__col" aria-label="Cities we deliver to">
+                    <h3 class="footer__col-title">We deliver to</h3>
+                    <ul class="footer__links footer__links--cities" role="list">
+                        <li><a href="#" class="footer__link">Bangalore</a></li>
+                        <li><a href="#" class="footer__link">Mumbai</a></li>
+                        <li><a href="#" class="footer__link">Gurgaon</a></li>
+                        <li><a href="#" class="footer__link">Hyderabad</a></li>
+                        <li><a href="#" class="footer__link">Delhi</a></li>
+                        <li><a href="#" class="footer__link">Chennai</a></li>
+                        <li><a href="#" class="footer__link">Pune</a></li>
+                        <li><a href="#" class="footer__link">Kolkata</a></li>
+                        <li><a href="#" class="footer__link">Ahmedabad</a></li>
+                        <li><a href="#" class="footer__link">Jaipur</a></li>
+                        <li><a href="#" class="footer__link">Noida</a></li>
+                        <li><a href="#" class="footer__link">Lucknow</a></li>
+                    </ul>
+                </nav>
+
+            </div><!-- /footer__top -->
+
+            <div class="footer__bottom">
+                <p>Swiggy is only available in select cities. We're working hard to expand our services to more cities
+                    soon!</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

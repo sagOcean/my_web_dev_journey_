@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiggy Clone</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container navbar">
+
+      <!-- Left -->
+      <div class="nav-left">
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Swiggy_logo.png" alt="Swiggy Logo" />
+        </div>
+
+        <div class="location">
+          <span class="location-home">Home</span>
+          <span class="location-city">Mumbai, Maharashtra</span>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <nav class="nav-right">
+        <a href="#" class="nav-item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Search</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <i class="fa-solid fa-percent"></i>
+          <span>Offers</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <i class="fa-regular fa-circle-question"></i>
+          <span>Help</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <i class="fa-regular fa-user"></i>
+          <span>Sign In</span>
+        </a>
+
+        <a href="#" class="nav-item cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+          <span class="cart-badge">2</span>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section">
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div class="hero-card large">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
+            alt="Food Banner" />
+
+          <div class="hero-overlay">
+            <h2>50% OFF</h2>
+            <p>On your first order</p>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop"
+            alt="Pizza" />
+
+          <div class="hero-overlay">
+            <h3>Free Delivery</h3>
+            <p>Above ₹199</p>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop"
+            alt="Burger" />
+
+          <div class="hero-overlay">
+            <h3>Late Night Cravings?</h3>
+            <p>Order till 2 AM</p>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=1200&auto=format&fit=crop"
+            alt="Combo" />
+
+          <div class="hero-overlay">
+            <h3>Best Combo Deals</h3>
+            <p>Starting at ₹149</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CATEGORY SECTION ================= -->
+  <section class="categories-section">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>What's on your mind?</h2>
+      </div>
+
+      <div class="categories-grid">
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=500&auto=format&fit=crop"
+            alt="Biryani" />
+          <p>Biryani</p>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500&auto=format&fit=crop"
+            alt="Pizza" />
+          <p>Pizza</p>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500&auto=format&fit=crop"
+            alt="Burger" />
+          <p>Burgers</p>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=500&auto=format&fit=crop"
+            alt="North Indian" />
+          <p>North Indian</p>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=500&auto=format&fit=crop"
+            alt="Chinese" />
+          <p>Chinese</p>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=500&auto=format&fit=crop"
+            alt="Cakes" />
+          <p>Cakes</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= RESTAURANT SECTION ================= -->
+  <section class="restaurants-section">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Top restaurant chains in your city</h2>
+      </div>
+
+      <div class="restaurant-grid">
+
+        <!-- Card 1 -->
+        <article class="restaurant-card">
+
+          <div class="restaurant-image">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+              alt="Restaurant" />
+          </div>
+
+          <div class="restaurant-content">
+            <h3>Spice Villa</h3>
+
+            <div class="restaurant-info">
+              <span><i class="fa-solid fa-star"></i> 4.4</span>
+              <span>25-30 mins</span>
+            </div>
+
+            <p>North Indian, Biryani, Kebabs</p>
+          </div>
+
+        </article>
+
+        <!-- Card 2 -->
+        <article class="restaurant-card">
+
+          <div class="restaurant-image">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop"
+              alt="Restaurant" />
+          </div>
+
+          <div class="restaurant-content">
+            <h3>Pizza World</h3>
+
+            <div class="restaurant-info">
+              <span><i class="fa-solid fa-star"></i> 4.2</span>
+              <span>20-25 mins</span>
+            </div>
+
+            <p>Pizza, Italian, Fast Food</p>
+          </div>
+
+        </article>
+
+        <!-- Card 3 -->
+        <article class="restaurant-card">
+
+          <div class="restaurant-image">
+            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=1200&auto=format&fit=crop"
+              alt="Restaurant" />
+          </div>
+
+          <div class="restaurant-content">
+            <h3>Burger Hub</h3>
+
+            <div class="restaurant-info">
+              <span><i class="fa-solid fa-star"></i> 4.5</span>
+              <span>30-35 mins</span>
+            </div>
+
+            <p>Burgers, Fries, American</p>
+          </div>
+
+        </article>
+
+        <!-- Card 4 -->
+        <article class="restaurant-card">
+
+          <div class="restaurant-image">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop"
+              alt="Restaurant" />
+          </div>
+
+          <div class="restaurant-content">
+            <h3>Dragon Bowl</h3>
+
+            <div class="restaurant-info">
+              <span><i class="fa-solid fa-star"></i> 4.1</span>
+              <span>35-40 mins</span>
+            </div>
+
+            <p>Chinese, Asian, Noodles</p>
+          </div>
+
+        </article>
+
+        <!-- Card 5 -->
+        <article class="restaurant-card">
+
+          <div class="restaurant-image">
+            <img src="https://images.unsplash.com/photo-1559847844-d721426d6edc?q=80&w=1200&auto=format&fit=crop"
+              alt="Restaurant" />
+          </div>
+
+          <div class="restaurant-content">
+            <h3>Royal Tandoor</h3>
+
+            <div class="restaurant-info">
+              <span><i class="fa-solid fa-star"></i> 4.6</span>
+              <span>40-45 mins</span>
+            </div>
+
+            <p>Tandoori, North Indian</p>
+          </div>
+
+        </article>
+
+        <!-- Card 6 -->
+        <article class="restaurant-card">
+
+          <div class="restaurant-image">
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop"
+              alt="Restaurant" />
+          </div>
+
+          <div class="restaurant-content">
+            <h3>Sweet Treats</h3>
+
+            <div class="restaurant-info">
+              <span><i class="fa-solid fa-star"></i> 4.7</span>
+              <span>15-20 mins</span>
+            </div>
+
+            <p>Desserts, Cakes, Bakery</p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <!-- Column 1 -->
+      <div class="footer-column">
+        <div class="footer-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Swiggy_logo.png" alt="Swiggy" />
+        </div>
+
+        <p>© 2026 Swiggy Clone Technologies Pvt. Ltd.</p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h3>Company</h3>
+
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Swiggy One</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li><a href="#">Help & Support</a></li>
+          <li><a href="#">Partner with us</a></li>
+          <li><a href="#">Ride with us</a></li>
+          <li><a href="#">Corporate Orders</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="footer-column">
+        <h3>We Deliver To</h3>
+
+        <ul>
+          <li><a href="#">Mumbai</a></li>
+          <li><a href="#">Delhi</a></li>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Pune</a></li>
+          <li><a href="#">Chennai</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

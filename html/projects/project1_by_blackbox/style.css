@@ -1,0 +1,620 @@
+/* 
+   Project: Swiggy Homepage Clone 
+   File: style.css
+   Description: Production-ready stylesheet using modern CSS3 (Flexbox, Grid, Variables).
+*/
+
+/* ------------------------------------------------------------
+   1. VARIABLES & RESET
+------------------------------------------------------------ */
+
+:root {
+    /* Palette */
+    --primary-orange: #FC8019;
+    --primary-orange-hover: #e67312;
+    --text-dark: #282C3F;
+    --text-muted: #686B78;
+    --white: #FFFFFF;
+    --bg-light-gray: #F9F9F9;
+    --bg-off-white: #F4F5F7;
+    --shadow-color: rgba(40, 44, 63, 0.08);
+    
+    /* Layout */
+    --nav-height: 70px;
+    --container-width: 1200px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', 'Proxima Nova', Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-orange-hover);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* ------------------------------------------------------------
+   2. NAVIGATION BAR
+------------------------------------------------------------ */
+
+.navbar {
+    height: var(--nav-height);
+    background-color: var(--white);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left Side: Logo & Location */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.logo-icon {
+    background-color: var(--primary-orange);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary-orange);
+    letter-spacing: -0.5px;
+}
+
+.location-selector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.location-selector:hover {
+    background-color: var(--bg-light-gray);
+}
+
+.location-text {
+    font-weight: 600;
+    color: var(--text-dark);
+    border-bottom: 1px dashed var(--text-dark);
+}
+
+.location-selector i {
+    color: var(--primary-orange);
+}
+
+/* Right Side: Nav Links */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    position: relative;
+}
+
+.nav-item i {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+/* Specific link color overrides */
+.nav-item:nth-child(2) i { color: var(--primary-orange); } /* Offers */
+
+.nav-item:hover i {
+    color: var(--primary-orange);
+}
+
+.super {
+    font-size: 0.6rem;
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    position: absolute;
+    top: -8px;
+    left: 45px;
+    font-weight: 700;
+}
+
+/* Cart Badge */
+.cart-badge {
+    background-color: var(--primary-orange);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* ------------------------------------------------------------
+   3. HERO PROMOTION SECTION
+------------------------------------------------------------ */
+
+.hero-section {
+    background-color: var(--bg-light-gray);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.promo-card {
+    background: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    overflow: hidden;
+    position: relative;
+    min-height: 200px;
+}
+
+.promo-content {
+    z-index: 2;
+    padding-right: 20px;
+}
+
+.promo-content h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.promo-content p {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.promo-card img {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    width: 220px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* ------------------------------------------------------------
+   4. CATEGORY SECTION (What's on your mind?)
+------------------------------------------------------------ */
+
+.category-section {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.scroll-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.scroll-btn {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.scroll-btn:hover {
+    background-color: var(--bg-light-gray);
+    border-color: #ccc;
+}
+
+.category-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    /* Hide scrollbar */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+.category-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+.category-item img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    background-color: var(--bg-off-white);
+}
+
+.category-item span {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+/* ------------------------------------------------------------
+   5. RESTAURANT GRID SECTION
+------------------------------------------------------------ */
+
+.restaurant-section {
+    padding-bottom: 4rem;
+    background-color: var(--bg-light-gray); /* Contrast section */
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.restaurant-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-image {
+    height: 180px;
+    width: 100%;
+    position: relative;
+    background-color: var(--bg-off-white);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--text-dark);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.card-details {
+    padding: 12px;
+}
+
+.card-details h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rating i {
+    color: #1b8618; /* Swiggy Green for rating star */
+    margin-right: 4px;
+}
+
+.cuisine {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.location-info {
+    font-size: 0.8rem;
+    color: #93959f;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.location-info::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-orange);
+    margin-right: 6px;
+}
+
+/* ------------------------------------------------------------
+   6. FOOTER
+------------------------------------------------------------ */
+
+footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Column 1 */
+.footer-brand .logo-text {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #93959f;
+}
+
+/* Other Columns */
+.footer-col h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #93959f;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--primary-orange);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #3e4152;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #93959f;
+}
+
+/* ------------------------------------------------------------
+   7. RESPONSIVENESS (Media Queries)
+------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
+    
+    .nav-item span {
+        display: none; /* Hide text on tablets, keep icons */
+    }
+    
+    .nav-item {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-left {
+        gap: 1rem;
+    }
+    
+    .location-selector {
+        display: none; /* Hide location selector on smaller screens to save space */
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .restaurant-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .promo-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .promo-card img {
+        position: static;
+        width: 100%;
+        height: 150px;
+        margin-top: 15px;
+    }
+    
+    .promo-content {
+        padding-right: 0;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
