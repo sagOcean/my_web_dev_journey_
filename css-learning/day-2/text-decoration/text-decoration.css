@@ -1,0 +1,22 @@
+body{
+    background-color: white;
+}
+.A_players{
+    text-align: center;
+    text-decoration:  underline overline wavy red 3px;
+}
+#A{
+    color: blue;
+}
+.B_players{
+    text-align: center;
+    text-decoration: underline overline dotted red 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+}
+#B{
+    color: rgb(178, 21, 94);
+    list-style-position: inside;
+    text-align: center;
+
+}

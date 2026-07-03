@@ -1,0 +1,9 @@
+h1{
+    text-transform: capitalize;
+    text-align: center;
+}
+p{
+    line-height: 3;
+    font-family: cursive;
+    text-transform: capitalize;
+}
