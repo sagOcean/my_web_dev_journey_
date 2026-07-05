@@ -1,0 +1,8 @@
+div{
+    border:2px solid blue;
+    height: 100px;
+    width: 100px;
+    padding: 10px 20px 30px 40px;/* padding is for within the content*/
+    margin-bottom: 30px; /* margin is for the outside boxes/tags*/
+    display:inline-block;
+}
