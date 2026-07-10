@@ -1,0 +1,36 @@
+:root {
+    --main_color: red;
+    --sec_color: blue;
+}
+
+.container {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: var(--main_color);
+}
+
+.box1 {
+    background-color: var(--main_color);
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    margin: 20px;
+
+}
+
+.box2 {
+    background-color: var(--sec_color);
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.box3 {
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    margin: 20px;
+    background-color: aqua;
+}

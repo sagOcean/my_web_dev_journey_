@@ -1,0 +1,11 @@
+.box1{
+    border:2px solid black;
+    height:200px;
+    width:400px;
+    background-image: url("bird.jpg");
+    background-size: contain;
+}
+/* body{
+    background-image: url("bird.jpg");
+    background-size: cover;
+} */

@@ -1,0 +1,15 @@
+.parent{
+    border:2px solid black;
+    height: 100px;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.child{
+    border:1.5px solid blue;
+    height:30px;
+    /* align-self:flex-start   align-self has more priority than align-items*/
+
+
+}

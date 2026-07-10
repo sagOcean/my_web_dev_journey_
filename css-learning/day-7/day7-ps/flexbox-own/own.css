@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    height: 500px;
+    width: 500px;
+    border: 2px solid green;
+    flex-direction: column;
+    justify-content: flex-start;/*justify-content work on main axis, in this case its column.*/
+    align-items: stretch;  /*align-items work on cross axis, in this case its row.*/
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+    gap: 5px;
+    
+}
+.box{
+    /* margin: 5px; */
+    /* height: 100px;
+    width: 100px; */
+    border:2px solid black;
+    /* margin: 2px; */
+    
+    
+}
+.box1{
+    background-color: blueviolet;
+}
+.box2{
+    background-color: rgb(40, 216, 81);
+}
+.box3{
+    background-color: rgb(235, 139, 21);
+}

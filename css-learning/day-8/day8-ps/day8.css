@@ -1,0 +1,23 @@
+.nav_container{
+    display: flex;
+    border:2px solid black;
+    justify-content: space-evenly;
+    
+
+}
+a{
+    
+    text-decoration: none;
+    
+}
+li{
+    display: inline;
+    background-color: aqua;
+}
+
+
+
+
+
+
+

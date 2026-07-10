@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container{
+            display:flex;
+            border:3px solid black;
+            height:60vh;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            /* align-content: center; */
+            flex-wrap: wrap;
+            
+            gap:20px;
+            /* shorthand for gap: gap: 10px 40px --> row  column; */
+            
+        }
+        .item{
+            height:40px;
+            width:20px;
+            border:2px solid brown;
+            /* margin:3px;
+            padding:4px; */
+            
+            background-color: aqua;
+            
+        }
+        .item1{
+            flex-grow: 1;
+            align-self:flex-start;
+        }
+        .item2{
+            flex-grow:2;
+            align-self:flex-endr;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        
+    </div>
+</body>
+
+</html>

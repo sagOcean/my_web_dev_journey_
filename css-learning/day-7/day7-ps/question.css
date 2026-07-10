@@ -1,0 +1,23 @@
+ /* <!-- create the following layout using the given html:
+     1. give the div a height, width and somr background image
+     2. use the appropriate position property for the div element to place 
+     it at the right end of page.(the div should not move even on scrool) --> 
+     
+     <p> lorem*5</p>
+     <div>love nature</div>
+     <p>lorem*5</p>*/
+
+
+div{
+    height:100px;
+    width: 400px;
+    /* border:2px solid black; */
+    position: fixed;
+    bottom: 0px;
+    background-image:url("bird.jpg") ;
+    background-size: cover;
+    text-align: center;
+    font-size:larger;
+    font-weight: bolder ;
+
+}

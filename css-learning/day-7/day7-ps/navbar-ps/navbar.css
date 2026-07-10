@@ -1,0 +1,17 @@
+:root{
+    --navBGcolor: rgb(0, 255, 98);
+    --hrefColor: rgb(86, 12, 223);
+    --navMargin:20px;
+}
+
+
+
+.navbar{
+    background-color: var(--navBGcolor);
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    margin: var(--navMargin);
+    color:var(--hrefColor);
+}
