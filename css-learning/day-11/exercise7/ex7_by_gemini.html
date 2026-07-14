@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraEdit Grid Replica</title>
+    <style>
+        /* CSS Reset for cleaner default spacing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Calibri, sans-serif;
+        }
+
+        /* 1. The Main Grid Board */
+        .container {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 280px 280px 280px; 
+            row-gap: 30px;
+            column-gap: 20px; /* Added explicit column gap */
+            justify-content: center;
+            align-content: center;
+        }
+
+        /* 2. The Individual Cards (Now acting as Flex containers to center content) */
+        .item {
+            height: 120px; /* Slightly taller to fit the subtitle */
+            background-color: #f9f9f9;
+            border-radius: 4px; /* Rounded corners like the screenshot */
+            
+            /* Turning the card into a flex column to perfectly center the text and buttons */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Text Styling */
+        .item h3 {
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .item p {
+            color: #777;
+            font-size: 0.75rem;
+            margin-bottom: 15px; /* Pushes the buttons down slightly */
+        }
+
+        /* 3. The Button Layout */
+        .button-group {
+            display: flex;
+            gap: 10px; /* Modern way to separate buttons, no margins needed! */
+        }
+
+        .but {
+            height: 30px;
+            padding: 0 12px;
+            border-radius: 3px;
+            border: none;
+            font-weight: bold;
+            color: white;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .but32 {
+            background-color: #00b8d4; /* Closer to UltraEdit cyan */
+        }
+
+        .but64 {
+            background-color: #4caf50; /* Closer to UltraEdit green */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <h3>English</h3>
+            <p>&nbsp;</p> <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Deutsch</h3>
+            <p>German</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Italiano</h3>
+            <p>Italian</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Español</h3>
+            <p>Spanish</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>français</h3>
+            <p>French</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>Português brasileiro</h3>
+            <p>Brazilian Portuguese</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>日本語</h3>
+            <p>Japanese</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>한국어</h3>
+            <p>Korean</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>中国</h3>
+            <p>Chinese</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <h3>中國</h3>
+            <p>Traditional Chinese</p>
+            <div class="button-group">
+                <button class="but but32">Download 32-bit</button>
+                <button class="but but64">Download 64-bit</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

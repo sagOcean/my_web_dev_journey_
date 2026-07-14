@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transform</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+            border: 2px solid black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* transform: rotate(89deg);/*rotates by some degree */
+            /* transform: scalex(1) scaley(2) ; /*stretch/increase the size on x/y axis */
+            transform: skewx(0deg) skewY(30deg) ;/*stretches the corner in either x/y axis
+            /* transform: translateX(30%) translateY(60%); moving in x/y direction based on the size of box */
+            /* transform: rotate3d(0.5,0,0.5,30deg);try on rotate3d */
+            /* transform-origin: 5% 0%; */
+            transition: all 2s ease-out;
+
+        }
+        .container{
+            width: 100vw;
+            height: 80vw;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1--2</div>
+    </div>
+</body>
+</html>
